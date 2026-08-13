@@ -1,45 +1,4 @@
-import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
 import { skills } from "@/lib/content"
-
-function SkillsChart() {
-  return (
-    <div className="h-56 w-full max-w-[796px]">
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart
-          data={skills}
-          layout="vertical"
-          margin={{ top: 4, right: 24, bottom: 4, left: 4 }}
-          barCategoryGap={14}
-        >
-          <XAxis type="number" domain={[0, 100]} hide />
-          <YAxis
-            type="category"
-            dataKey="label"
-            width={0}
-            tick={false}
-            axisLine={false}
-            tickLine={false}
-          />
-          <Tooltip
-            cursor={{ fill: "rgba(17,18,18,0.04)" }}
-            formatter={(value) => [`${value}%`, "Proficiency"]}
-            contentStyle={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: 12,
-              borderRadius: 4,
-              border: "1px solid #d0d3cd",
-            }}
-          />
-          <Bar dataKey="level" radius={[0, 3, 3, 0]} barSize={10}>
-            {skills.map((skill, index) => (
-              <Cell key={skill.label} fill={index === 3 ? "#111212" : "#d4ef44"} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-    </div>
-  )
-}
 
 export function AboutMe() {
   return (
@@ -86,17 +45,14 @@ export function AboutMe() {
           <p className="font-bold text-[14px] tracking-wide text-[#2e49fa]">
             // WHAT I&rsquo;M BEST AT
           </p>
-          <div className="w-full">
-            <SkillsChart />
-            <ul className="mt-2 flex flex-col gap-1.5">
-              {skills.map((skill) => (
-                <li key={skill.label} className="flex items-center gap-3 text-[13px] text-[#1c1c1c]">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#a6a6a6]" />
-                  {skill.label}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="flex flex-col gap-2.5">
+            {skills.map((skill) => (
+              <li key={skill.label} className="flex items-center gap-3 text-[15px] text-[#1c1c1c]">
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#a6a6a6]" />
+                {skill.label}
+              </li>
+            ))}
+          </ul>
 
           <a
             href="/resume.pdf"

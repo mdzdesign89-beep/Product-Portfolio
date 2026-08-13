@@ -1,16 +1,6 @@
-import { useState } from "react"
-import { filters, projects } from "@/lib/content"
-
-function matchesFilter(tags: string[], filter: string) {
-  if (filter === "ALL") return true
-  const needle = filter.toLowerCase().replace(" ", "")
-  return tags.some((tag) => tag.toLowerCase().replace(" ", "").includes(needle.replace("systems", "system")))
-}
+import { projects } from "@/lib/content"
 
 export function SelectedWork() {
-  const [activeFilter, setActiveFilter] = useState("ALL")
-  const visibleProjects = projects.filter((project) => matchesFilter(project.tags, activeFilter))
-
   return (
     <section id="work" className="flex flex-col gap-8 bg-ink px-6 py-16 md:px-16 md:py-20">
       <div className="flex flex-col gap-3.5">
@@ -26,35 +16,18 @@ export function SelectedWork() {
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            type="button"
-            onClick={() => setActiveFilter(filter)}
-            className={`px-4 py-2.5 font-nav text-[11px] font-bold tracking-wide transition-colors ${
-              activeFilter === filter
-                ? "bg-lime text-ink"
-                : "bg-[#292b29] text-[#adb0ad] hover:text-mist"
-            }`}
-          >
-            {filter}
-          </button>
-        ))}
-      </div>
-
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {visibleProjects.map((project) => (
+        {projects.map((project) => (
           <article
             key={project.id}
-            className="flex flex-col border border-line-dark bg-[#1b1c1c]"
+            className="flex flex-col rounded-lg border border-line-dark bg-[#1b1c1c] px-4 pt-4"
           >
             <img
               src={project.cover}
               alt={project.coverAlt}
-              className="h-[190px] w-full object-cover"
+              className="h-[190px] w-full rounded object-cover"
             />
-            <div className="flex flex-col items-start gap-2.5 px-6 py-5.5">
+            <div className="flex flex-col items-start gap-2.5 px-2 py-5.5">
               <div className="flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
                   <span

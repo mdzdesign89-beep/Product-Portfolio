@@ -11,11 +11,11 @@ export const navLinks = [
 ]
 
 export const skills = [
-  { label: "End-to-end UX research & discovery", level: 95 },
-  { label: "Usability testing & experimentation", level: 90 },
-  { label: "Workshop and design frameworks implementation", level: 85 },
-  { label: "AI design workflows and prototyping (Figma + MCP)", level: 92 },
-  { label: "Cross-team facilitation", level: 88 },
+  { label: "End-to-end UX research & discovery" },
+  { label: "Usability testing & experimentation" },
+  { label: "Workshop and design frameworks implementation" },
+  { label: "AI design workflows and prototyping (Figma + MCP)" },
+  { label: "Cross-team facilitation" },
 ]
 
 export type Project = {
@@ -29,8 +29,6 @@ export type Project = {
   cover: string
   coverAlt: string
 }
-
-export const filters = ["ALL", "UX RESEARCH", "DESIGN SYSTEMS", "FINTECH"]
 
 export const projects: Project[] = [
   {

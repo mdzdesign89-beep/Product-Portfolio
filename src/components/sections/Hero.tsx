@@ -2,9 +2,9 @@ export function Hero() {
   return (
     <section id="top" className="flex flex-col items-start gap-6 bg-paper px-6 py-16 md:px-16 md:py-20">
       <span className="bg-lime px-3 py-1.5 font-mono text-[10px] font-bold tracking-wide text-ink">
-        PRODUCT DESIGNER · UX · MEXICO
+        MEXICO CITY | REMOTE
       </span>
-      <h1 className="max-w-4xl font-display text-5xl font-black leading-[0.92] tracking-tight text-ink md:text-7xl lg:text-[92px] lg:tracking-[-3.22px]">
+      <h1 className="max-w-[1250px] font-display text-5xl font-black leading-[0.92] tracking-tight text-ink md:text-7xl lg:whitespace-nowrap lg:text-[92px] lg:tracking-[-3.22px]">
         UX Designer,
         <br />
         Product Designer &amp;
