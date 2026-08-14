@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { projects } from "@/lib/content"
 
 export function SelectedWork() {
@@ -56,9 +57,15 @@ export function SelectedWork() {
                 </div>
               </dl>
               <p className="text-[13px] leading-relaxed text-[#adb0ad]">{project.outcome}</p>
-              <a href={`#work`} className="text-[10px] font-bold tracking-wide text-lime">
-                VIEW CASE STUDY →
-              </a>
+              {project.caseStudyHref ? (
+                <Link to={project.caseStudyHref} className="text-[10px] font-bold tracking-wide text-lime">
+                  VIEW CASE STUDY →
+                </Link>
+              ) : (
+                <span className="text-[10px] font-bold tracking-wide text-lime/50">
+                  CASE STUDY COMING SOON
+                </span>
+              )}
             </div>
           </article>
         ))}

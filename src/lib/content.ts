@@ -28,6 +28,7 @@ export type Project = {
   outcome: string
   cover: string
   coverAlt: string
+  caseStudyHref?: string
 }
 
 export const projects: Project[] = [
@@ -41,6 +42,7 @@ export const projects: Project[] = [
     outcome: "One-line outcome: what changed and by how much.",
     cover: xylenceCover,
     coverAlt: "Xylence — intelligence for venture capital cover art",
+    caseStudyHref: "/case-studies/xylence",
   },
   {
     id: "citradr",
