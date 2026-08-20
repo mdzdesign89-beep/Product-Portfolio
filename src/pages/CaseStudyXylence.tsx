@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { HeaderNav } from "@/components/sections/HeaderNav"
 import { Cover } from "@/components/case-studies/xylence/Cover"
 import { TlDr } from "@/components/case-studies/xylence/TlDr"
 import { Section01Arriving } from "@/components/case-studies/xylence/Section01Arriving"
@@ -18,6 +19,7 @@ export function CaseStudyXylence() {
 
   return (
     <div className="min-h-screen bg-cs-bg">
+      <HeaderNav />
       <Cover />
       <TlDr />
       <Section01Arriving />

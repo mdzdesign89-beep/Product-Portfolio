@@ -7,8 +7,11 @@ import { ExperienceTools } from "@/components/sections/ExperienceTools"
 import { Testimonials } from "@/components/sections/Testimonials"
 import { Contact } from "@/components/sections/Contact"
 import { Footer } from "@/components/sections/Footer"
+import { useScrollToHash } from "@/lib/useScrollToHash"
 
 export function Home() {
+  useScrollToHash()
+
   return (
     <div className="min-h-screen bg-paper">
       <HeaderNav />
