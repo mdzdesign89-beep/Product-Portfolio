@@ -54,6 +54,7 @@ export const projects: Project[] = [
     outcome: "Integrate the trading product into the super app and align it with its new design.",
     cover: citradrCover,
     coverAlt: "CITradR trading app cover art",
+    caseStudyHref: "/case-studies/citradr",
   },
   {
     id: "rewards-gamification",
