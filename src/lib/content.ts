@@ -66,6 +66,7 @@ export const projects: Project[] = [
     outcome: "One-line outcome: what changed and by how much.",
     cover: rewardsCover,
     coverAlt: "Rewards & Gamification system cover art",
+    caseStudyHref: "/case-studies/azteca",
   },
   {
     id: "hiring-platform",
