@@ -4,7 +4,6 @@ import rewardsCover from "@/assets/covers/rewards.png"
 import hiringCover from "@/assets/covers/hiring-platform.png"
 
 export const navLinks = [
-  { label: "WORK", href: "#work" },
   { label: "ABOUT", href: "#about" },
   { label: "PROJECTS", href: "#work" },
   { label: "EXPERIENCE", href: "#experience" },
