@@ -22,7 +22,7 @@ function StaggeredBullets({
           className={`flex items-start gap-2.5 font-case text-base leading-relaxed text-[#575757] transition-[opacity,transform] duration-500 ease-out ${
             visible ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"
           }`}
-          style={{ transitionDelay: visible ? `${i * 70}ms` : "0ms" }}
+          style={{ transitionDelay: visible ? `${i * 150}ms` : "0ms" }}
         >
           <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${dotClassName}`} />
           <span>{item}</span>
