@@ -61,14 +61,14 @@ export function BeforeAfterToggle({
           <img
             src={before}
             alt={beforeAlt}
-            className={`absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-300 ease-out ${
+            className={`absolute left-1/2 top-1/2 h-full w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain transition-opacity duration-300 ease-out ${
               showAfter ? "opacity-0" : "opacity-100"
             }`}
           />
           <img
             src={after}
             alt={afterAlt}
-            className={`absolute inset-0 m-auto h-full w-auto object-contain transition-opacity duration-300 ease-out ${
+            className={`absolute left-1/2 top-1/2 h-full w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain transition-opacity duration-300 ease-out ${
               showAfter ? "opacity-100" : "opacity-0"
             }`}
           />
