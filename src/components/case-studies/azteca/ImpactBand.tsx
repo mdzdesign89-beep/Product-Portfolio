@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal"
+import { CountUpText } from "@/components/motion/CountUpText"
 const metrics = [
   { value: "−11.1%", label: "Abandonment in the reward\nredemption flow" },
   { value: "+5.3%", label: "Conversion on the same flow" },
@@ -13,7 +14,9 @@ export function ImpactBand() {
       <div className="grid w-full grid-cols-2 gap-6 lg:grid-cols-4">
         {metrics.map((metric, i) => (
           <div key={metric.value} className={i > 0 ? "flex flex-col gap-2 border-l border-[#59bf80] pl-8" : "flex flex-col gap-2"}>
-            <p className="text-4xl font-bold leading-tight text-white">{metric.value}</p>
+            <p className="text-4xl font-bold leading-tight text-white">
+              <CountUpText text={metric.value} />
+            </p>
             <p className="whitespace-pre-line text-[13px] text-[#d9f2e3]">{metric.label}</p>
           </div>
         ))}

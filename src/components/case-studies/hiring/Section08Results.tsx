@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import { Reveal } from "@/components/motion/Reveal"
+import { CountUpText } from "@/components/motion/CountUpText"
 
 const results = [
   {
@@ -58,7 +59,7 @@ export function Section08Results() {
             className={`flex flex-col gap-2 rounded-xl bg-hp-teal-2 p-7 ${result.highlight ? "border-2 border-[#ffbfae]" : "border border-[#4d7882]"}`}
           >
             <p className={`font-case text-[44px] font-bold leading-tight ${result.highlight ? "text-[#ffbfae]" : "text-white"}`}>
-              {result.value}
+              <CountUpText text={result.value} />
             </p>
             <p className="font-case text-lg font-semibold text-white">{result.title}</p>
             <p className="font-case text-[15px] text-[#c7dbde]">{result.detail}</p>

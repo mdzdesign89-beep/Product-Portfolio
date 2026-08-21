@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import { Reveal } from "@/components/motion/Reveal"
+import { CountUpText } from "@/components/motion/CountUpText"
 
 const metrics = [
   { value: "−11.1%", title: "Abandonment", detail: "Reward redemption flow, variant vs control" },
@@ -21,7 +22,9 @@ export function Section05Results() {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
         {metrics.map((metric) => (
           <div key={metric.title} className="flex flex-col gap-1.5 rounded-[10px] border border-aza-border bg-aza-mist p-6.5">
-            <p className="text-4xl font-bold leading-tight text-aza-ink">{metric.value}</p>
+            <p className="text-4xl font-bold leading-tight text-aza-ink">
+              <CountUpText text={metric.value} />
+            </p>
             <p className="text-[15px] font-semibold text-aza-ink">{metric.title}</p>
             <p className="text-[13px] text-aza-muted">{metric.detail}</p>
           </div>

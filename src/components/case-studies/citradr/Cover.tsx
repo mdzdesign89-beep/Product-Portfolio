@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { Reveal } from "@/components/motion/Reveal"
+import { CountUpText } from "@/components/motion/CountUpText"
 import phoneMockup from "@/assets/case-studies/citradr/cover-phone.png"
 
 const roles = [
@@ -80,7 +81,7 @@ export function Cover() {
             {metrics.map((metric) => (
               <div key={metric.title} className="flex flex-1 flex-col gap-1 py-4 first:pt-0 sm:px-7.5 sm:py-0 sm:first:pl-0">
                 <p className="font-case text-[46px] font-bold leading-tight text-cib-lime">
-                  {metric.value}
+                  <CountUpText text={metric.value} />
                 </p>
                 <p className="font-case text-lg font-semibold text-white">{metric.title}</p>
                 <p className="font-case text-sm text-[#b8bdc2]">{metric.detail}</p>

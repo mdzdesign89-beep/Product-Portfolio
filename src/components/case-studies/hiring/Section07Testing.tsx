@@ -2,6 +2,7 @@ import { SectionHead } from "./SectionHead"
 import annotatedScreens from "@/assets/case-studies/hiring/annotated-screens.png"
 import contrastHeatmap from "@/assets/case-studies/hiring/contrast-heatmap.jpg"
 import { Reveal } from "@/components/motion/Reveal"
+import { CountUpText } from "@/components/motion/CountUpText"
 
 const scores = [
   { value: "50", title: "Usability score · Baseline", note: "First prototype, before any iteration", highlight: false },
@@ -46,7 +47,7 @@ export function Section07Testing() {
             className={`flex flex-col gap-1.5 rounded-xl p-7 ${score.highlight ? "border-2 border-hp-teal bg-hp-teal" : "border border-hp-border bg-hp-mist"}`}
           >
             <p className={`font-case text-[56px] font-bold leading-tight ${score.highlight ? "text-white" : "text-hp-teal"}`}>
-              {score.value}
+              <CountUpText text={score.value} />
             </p>
             <p className={`font-case text-lg font-semibold ${score.highlight ? "text-white" : "text-hp-ink"}`}>{score.title}</p>
             <p className={`font-case text-[15px] ${score.highlight ? "text-[#c7dbde]" : "text-hp-muted"}`}>{score.note}</p>

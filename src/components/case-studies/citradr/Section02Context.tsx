@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import { Reveal } from "@/components/motion/Reveal"
+import { CountUpText } from "@/components/motion/CountUpText"
 
 const stats = [
   { value: "MXN 236 bn", title: "CIBanco assets under management", note: "1.54% of the Mexican banking system — CNBV, Apr 2025" },
@@ -53,7 +54,9 @@ export function Section02Context() {
       <div className="grid w-full grid-cols-1 divide-y divide-cib-border rounded-xl border border-cib-border bg-cib-bg-3 sm:grid-cols-4 sm:divide-x sm:divide-y-0">
         {stats.map((stat) => (
           <div key={stat.title} className="flex flex-col gap-1.5 px-7.5 py-8">
-            <p className="font-case text-[42px] font-bold leading-tight text-cib-lime">{stat.value}</p>
+            <p className="font-case text-[42px] font-bold leading-tight text-cib-lime">
+              <CountUpText text={stat.value} />
+            </p>
             <p className="font-case text-base font-semibold text-white">{stat.title}</p>
             <p className="font-case text-sm text-[#d4d4d4]">{stat.note}</p>
           </div>

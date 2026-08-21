@@ -2,6 +2,7 @@ import { SectionHead } from "./SectionHead"
 import variantA from "@/assets/case-studies/citradr/variant-a.png"
 import variantB from "@/assets/case-studies/citradr/variant-b.png"
 import { Reveal } from "@/components/motion/Reveal"
+import { CountUpText } from "@/components/motion/CountUpText"
 
 const rows = [
   {
@@ -83,8 +84,12 @@ export function Section07Testing() {
                 <td className="w-[260px] px-7 py-6 text-base leading-relaxed text-[#575757]">{row.failed}</td>
                 <td className="w-[260px] px-7 py-6 text-base leading-relaxed text-[#575757]">{row.changed}</td>
                 <td className="px-7 py-6">
-                  <p className="font-case text-2xl font-medium text-cib-olive">{row.completion}</p>
-                  <p className="font-case text-2xl font-bold text-cib-olive">{row.pct}</p>
+                  <p className="font-case text-2xl font-medium text-cib-olive">
+                    <CountUpText text={row.completion} />
+                  </p>
+                  <p className="font-case text-2xl font-bold text-cib-olive">
+                    <CountUpText text={row.pct} />
+                  </p>
                 </td>
               </tr>
             ))}
