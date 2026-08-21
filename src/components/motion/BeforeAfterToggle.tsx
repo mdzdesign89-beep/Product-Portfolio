@@ -54,30 +54,34 @@ export function BeforeAfterToggle({
         </button>
       </div>
 
-      <div className={`relative h-[420px] w-full overflow-hidden rounded-lg ${imageContainerClassName}`}>
-        <img
-          src={before}
-          alt={beforeAlt}
-          className={`absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-300 ease-out ${
-            showAfter ? "opacity-0" : "opacity-100"
-          }`}
-        />
-        <img
-          src={after}
-          alt={afterAlt}
-          className={`absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-300 ease-out ${
-            showAfter ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      </div>
+      <div className="flex flex-col gap-6 md:flex-row md:items-center">
+        <div
+          className={`relative h-[420px] w-full shrink-0 overflow-hidden rounded-lg md:w-[320px] ${imageContainerClassName}`}
+        >
+          <img
+            src={before}
+            alt={beforeAlt}
+            className={`absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-300 ease-out ${
+              showAfter ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <img
+            src={after}
+            alt={afterAlt}
+            className={`absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-300 ease-out ${
+              showAfter ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        </div>
 
-      <ul className="flex flex-col gap-2">
-        {(showAfter ? afterBullets : beforeBullets).map((item) => (
-          <li key={item} className="font-case text-base leading-relaxed text-[#575757]">
-            · {item}
-          </li>
-        ))}
-      </ul>
+        <ul className="flex flex-col gap-3 md:flex-1">
+          {(showAfter ? afterBullets : beforeBullets).map((item) => (
+            <li key={item} className="font-case text-base leading-relaxed text-[#575757]">
+              · {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
