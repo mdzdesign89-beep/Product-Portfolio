@@ -68,7 +68,7 @@ export function BeforeAfterToggle({
           <img
             src={after}
             alt={afterAlt}
-            className={`absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-300 ease-out ${
+            className={`absolute inset-0 m-auto h-full w-auto object-contain transition-opacity duration-300 ease-out ${
               showAfter ? "opacity-100" : "opacity-0"
             }`}
           />
