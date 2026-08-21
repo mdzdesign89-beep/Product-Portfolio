@@ -77,6 +77,7 @@ export const projects: Project[] = [
     outcome: "One-line outcome: what changed and by how much.",
     cover: hiringCover,
     coverAlt: "Hiring Platform cover art",
+    caseStudyHref: "/case-studies/hiring",
   },
 ]
 

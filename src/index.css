@@ -70,6 +70,16 @@
     --color-aza-border: #dadee2;
     --color-aza-mist: #f6f7f8;
     --color-aza-footer: #2e3032;
+
+    --color-hp-ink: #1b2a2e;
+    --color-hp-muted: #4a5558;
+    --color-hp-muted-2: #5a6669;
+    --color-hp-rust: #c4472a;
+    --color-hp-teal: #2e5a66;
+    --color-hp-teal-2: #254953;
+    --color-hp-border: #d3dbdd;
+    --color-hp-mist: #f4f7f7;
+    --color-hp-block: #e4ebec;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
