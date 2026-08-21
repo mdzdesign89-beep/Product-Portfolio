@@ -1,6 +1,7 @@
 import { SectionHead } from "./SectionHead"
 import annotatedScreens from "@/assets/case-studies/hiring/annotated-screens.png"
 import contrastHeatmap from "@/assets/case-studies/hiring/contrast-heatmap.jpg"
+import { Reveal } from "@/components/motion/Reveal"
 
 const scores = [
   { value: "50", title: "Usability score · Baseline", note: "First prototype, before any iteration", highlight: false },
@@ -31,7 +32,7 @@ const rows = [
 
 export function Section07Testing() {
   return (
-    <section className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="07"
         title="Testing & iteration"
@@ -99,6 +100,6 @@ export function Section07Testing() {
           impact.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

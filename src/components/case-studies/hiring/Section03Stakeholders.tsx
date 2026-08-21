@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const rows = [
   {
@@ -71,7 +72,7 @@ const canvas = [
 
 export function Section03Stakeholders() {
   return (
-    <section className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="03"
         title="Working with stakeholders"
@@ -130,6 +131,6 @@ export function Section03Stakeholders() {
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

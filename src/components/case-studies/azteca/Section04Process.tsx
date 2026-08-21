@@ -1,10 +1,12 @@
 import { SectionHead } from "./SectionHead"
+import { BeforeAfterSlider } from "@/components/motion/BeforeAfterSlider"
 import processDiagram from "@/assets/case-studies/azteca/process-diagram.png"
 import fieldResearch from "@/assets/case-studies/azteca/field-research.png"
 import iaBefore from "@/assets/case-studies/azteca/ia-before.png"
 import iaAfter from "@/assets/case-studies/azteca/ia-after.png"
 import rewardComponent from "@/assets/case-studies/azteca/reward-component.png"
 import finalScreens from "@/assets/case-studies/azteca/final-screens.png"
+import { Reveal } from "@/components/motion/Reveal"
 
 function StepHead({ n, title }: { n: string; title: string }) {
   return (
@@ -70,7 +72,7 @@ const testSetup = [
 
 export function Section04Process() {
   return (
-    <section className="flex flex-col gap-14 bg-white px-6 py-16 md:px-16 md:py-22">
+    <Reveal as="section" className="flex flex-col gap-14 bg-white px-6 py-16 md:px-16 md:py-22">
       <SectionHead
         number="04"
         title="Design process"
@@ -123,20 +125,23 @@ export function Section04Process() {
           progress object, and add the one thing that was missing —
           monetary equivalence.
         </p>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          <div className="flex flex-col gap-4 rounded-xl border border-aza-border bg-aza-mist p-6">
-            <span className="w-fit rounded-full bg-[#eb7c7c] px-3 py-1 text-[11px] font-bold text-white">BEFORE</span>
-            <img src={iaBefore} alt="Before: payment mission card" className="w-full rounded-[10px] bg-white" />
+        <div className="flex flex-col gap-4 rounded-xl border border-aza-border bg-aza-mist p-6">
+          <BeforeAfterSlider
+            before={iaBefore}
+            after={iaAfter}
+            beforeAlt="Before: payment mission card showing only a check-mark counter"
+            afterAlt="After: one card showing payments, gems and monetary equivalence"
+            className="text-aza-muted"
+          />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <p className="text-[13px] leading-relaxed text-[#6c7385]">
+              <strong className="font-semibold text-aza-ink">BEFORE —</strong>{" "}
               Payment count only. The mission title repeats inside the
               card, and the reward is never expressed as a value — the
               user cannot tell what four check marks are worth.
             </p>
-          </div>
-          <div className="flex flex-col gap-4 rounded-xl border border-aza-border bg-aza-mist p-6">
-            <span className="w-fit rounded-full bg-aza-green px-3 py-1 text-[11px] font-bold text-white">AFTER</span>
-            <img src={iaAfter} alt="After: payments, gems, monetary equivalence card" className="w-full rounded-[10px] bg-white" />
             <p className="text-[13px] leading-relaxed text-[#6c7385]">
+              <strong className="font-semibold text-aza-ink">AFTER —</strong>{" "}
               One object carries payments, gems and monetary equivalence.
               Progress, reward and value are read in a single glance, with
               compliance detail behind "Conocer más".
@@ -182,6 +187,6 @@ export function Section04Process() {
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

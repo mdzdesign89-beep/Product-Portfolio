@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/Reveal"
 const metrics = [
   { value: "−11.1%", label: "Abandonment in the reward\nredemption flow" },
   { value: "+5.3%", label: "Conversion on the same flow" },
@@ -7,7 +8,7 @@ const metrics = [
 
 export function ImpactBand() {
   return (
-    <section className="flex flex-col items-start gap-7 bg-aza-green px-6 py-14 md:px-16">
+    <Reveal as="section" className="flex flex-col items-start gap-7 bg-aza-green px-6 py-14 md:px-16">
       <p className="text-[10px] font-bold text-[#d1f0de]">IMPACT</p>
       <div className="grid w-full grid-cols-2 gap-6 lg:grid-cols-4">
         {metrics.map((metric, i) => (
@@ -22,6 +23,6 @@ export function ImpactBand() {
         5,000 Banco Azteca users. Baseline taken from the pre-redesign flow
         over the same period.
       </p>
-    </section>
+    </Reveal>
   )
 }

@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import { Callout } from "./Callout"
+import { Reveal } from "@/components/motion/Reveal"
 
 const pipeline = [
   {
@@ -41,7 +42,7 @@ const changes = [
 
 export function Section05AiLoop() {
   return (
-    <section className="flex flex-col gap-11 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-11 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="05"
         title="Designing so a machine could build it"
@@ -79,6 +80,6 @@ export function Section05AiLoop() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

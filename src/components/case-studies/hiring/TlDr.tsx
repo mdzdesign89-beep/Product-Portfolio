@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/Reveal"
 const columns = [
   {
     label: "PROBLEM",
@@ -19,7 +20,7 @@ const columns = [
 
 export function TlDr() {
   return (
-    <section className="flex flex-col items-start gap-8 bg-hp-teal px-6 py-14 md:px-16">
+    <Reveal as="section" className="flex flex-col items-start gap-8 bg-hp-teal px-6 py-14 md:px-16">
       <p className="font-case text-base font-bold tracking-[0.1em] text-[#b0d6da]">
         THE CASE IN 30 SECONDS
       </p>
@@ -36,6 +37,6 @@ export function TlDr() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

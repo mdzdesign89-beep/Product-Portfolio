@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const deliverables = [
   {
@@ -29,7 +30,7 @@ const deliverables = [
 
 export function Section07Delivered() {
   return (
-    <section className="flex flex-col gap-10 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
       <SectionHead number="07" title="What was delivered — and what cannot be claimed" />
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {deliverables.map((item) => (
@@ -65,6 +66,6 @@ export function Section07Delivered() {
           dense financial data, and a system that an agent can build from.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import { Callout } from "./Callout"
+import { Reveal } from "@/components/motion/Reveal"
 
 const cards = [
   {
@@ -36,7 +37,7 @@ const cards = [
 
 export function Section02Thesis() {
   return (
-    <section className="flex flex-col gap-10 bg-cs-bg-2 px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cs-bg-2 px-6 py-16 md:px-16 md:py-24">
       <SectionHead number="02" title={`What "intelligence first" actually means`} />
       <Callout
         eyebrow="THE COMPANY THESIS"
@@ -64,6 +65,6 @@ export function Section02Thesis() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

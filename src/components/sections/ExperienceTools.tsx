@@ -1,8 +1,9 @@
 import { experience, toolGroups } from "@/lib/content"
+import { Reveal } from "@/components/motion/Reveal"
 
 export function ExperienceTools() {
   return (
-    <section id="experience" className="flex flex-col gap-9 bg-paper px-6 py-16 md:px-16 md:py-20">
+    <Reveal as="section" id="experience" className="flex flex-col gap-9 bg-paper px-6 py-16 md:px-16 md:py-20">
       <div className="flex flex-col gap-3.5">
         <div className="flex items-center justify-between">
           <h2 className="font-display text-4xl font-black leading-[0.92] tracking-tight text-ink md:text-[56px] md:tracking-[-1.96px]">
@@ -17,9 +18,10 @@ export function ExperienceTools() {
       </div>
 
       <div className="flex flex-col">
-        {experience.map((job) => (
-          <div
+        {experience.map((job, i) => (
+          <Reveal
             key={job.company}
+            delay={Math.min(i, 3) * 70}
             className="flex flex-col gap-6 border-t border-line py-7.5 md:flex-row"
           >
             <div className="flex w-full shrink-0 flex-col gap-1.5 md:w-[230px]">
@@ -51,7 +53,7 @@ export function ExperienceTools() {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
 
@@ -60,8 +62,12 @@ export function ExperienceTools() {
           Tools &amp; methodologies
         </p>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          {toolGroups.map((group) => (
-            <div key={group.label} className="flex flex-col gap-3 border border-line bg-paper px-6 py-5.5">
+          {toolGroups.map((group, i) => (
+            <Reveal
+              key={group.label}
+              delay={i * 80}
+              className="flex flex-col gap-3 border border-line bg-paper px-6 py-5.5"
+            >
               <p className="font-mono text-xs font-bold tracking-wide text-[#2e49fa]">
                 {group.label}
               </p>
@@ -75,10 +81,10 @@ export function ExperienceTools() {
                   </span>
                 ))}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

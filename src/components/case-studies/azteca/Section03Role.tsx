@@ -1,8 +1,9 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 export function Section03Role() {
   return (
-    <section className="flex flex-col gap-8 bg-white px-6 py-16 md:px-16 md:py-22">
+    <Reveal as="section" className="flex flex-col gap-8 bg-white px-6 py-16 md:px-16 md:py-22">
       <SectionHead
         number="03"
         title="My role"
@@ -51,6 +52,6 @@ export function Section03Role() {
           for every later trade-off.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

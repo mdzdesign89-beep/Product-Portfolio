@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { HeaderNav } from "@/components/sections/HeaderNav"
+import { ScrollProgressBar } from "@/components/motion/ScrollProgressBar"
 import { Cover } from "@/components/case-studies/citradr/Cover"
 import { DisclaimerBar } from "@/components/case-studies/citradr/DisclaimerBar"
 import { TlDr } from "@/components/case-studies/citradr/TlDr"
@@ -21,6 +22,7 @@ export function CaseStudyCitradr() {
 
   return (
     <div className="min-h-screen bg-cib-bg">
+      <ScrollProgressBar colorClassName="bg-cib-lime" />
       <HeaderNav />
       <Cover />
       <DisclaimerBar />

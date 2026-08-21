@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const chain = [
   {
@@ -40,7 +41,7 @@ const chain = [
 
 export function Section05Constraint() {
   return (
-    <section className="flex flex-col gap-10 bg-cib-lime px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cib-lime px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         theme="lime"
         number="05"
@@ -69,9 +70,10 @@ export function Section05Constraint() {
       </p>
 
       <div className="flex w-full flex-col gap-4">
-        {chain.map((link) => (
-          <div
+        {chain.map((link, i) => (
+          <Reveal
             key={link.tag}
+            delay={i * 90}
             className={`flex flex-col gap-5 rounded-[10px] bg-white px-7 py-6 sm:flex-row ${link.emphasis ? "border-2 border-[#aac132]" : "border border-[#aac132]"}`}
           >
             <p className="w-full shrink-0 font-case text-xs font-bold tracking-[0.08em] text-[#2e340b] sm:w-[140px]">
@@ -89,9 +91,9 @@ export function Section05Constraint() {
               <p className="font-case text-xs font-bold tracking-[0.08em] text-[#5c6066]">DECISION</p>
               <p className="font-case text-base font-medium leading-relaxed text-[#161719]">{link.decision}</p>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

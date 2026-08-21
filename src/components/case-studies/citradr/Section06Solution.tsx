@@ -4,10 +4,11 @@ import afterApp from "@/assets/case-studies/citradr/after-app.png"
 import dashboardHero from "@/assets/case-studies/citradr/dashboard-hero.png"
 import designSystem from "@/assets/case-studies/citradr/design-system.png"
 import crossSelling from "@/assets/case-studies/citradr/cross-selling.png"
+import { Reveal } from "@/components/motion/Reveal"
 
 export function Section06Solution() {
   return (
-    <section className="flex flex-col gap-8 bg-cib-mist px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-8 bg-cib-mist px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="06"
         title="The solution"
@@ -94,6 +95,6 @@ export function Section06Solution() {
         </p>
         <img src={crossSelling} alt="CITradR cross-selling flow across both apps" className="w-full rounded-lg" />
       </div>
-    </section>
+    </Reveal>
   )
 }

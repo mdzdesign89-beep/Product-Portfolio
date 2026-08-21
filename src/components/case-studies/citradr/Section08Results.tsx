@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const results = [
   {
@@ -59,7 +60,7 @@ const qualitative = [
 
 export function Section08Results() {
   return (
-    <section className="flex flex-col gap-10 bg-cib-bg-2 px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cib-bg-2 px-6 py-16 md:px-16 md:py-24">
       <SectionHead theme="dark" number="08" title="Results" />
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -90,6 +91,6 @@ export function Section08Results() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

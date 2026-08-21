@@ -1,8 +1,9 @@
 import { skills } from "@/lib/content"
+import { Reveal } from "@/components/motion/Reveal"
 
 export function AboutMe() {
   return (
-    <section id="about" className="flex flex-col gap-10 border-y border-line bg-paper px-6 py-16 md:px-16 md:py-20">
+    <Reveal as="section" id="about" className="flex flex-col gap-10 border-y border-line bg-paper px-6 py-16 md:px-16 md:py-20">
       <div className="flex flex-col gap-3.5">
         <div className="flex items-center justify-between">
           <h2 className="font-display text-4xl font-black leading-[0.92] tracking-tight text-ink md:text-[56px] md:tracking-[-1.96px]">
@@ -62,6 +63,6 @@ export function AboutMe() {
           </a>
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const metrics = [
   { value: "−11.1%", title: "Abandonment", detail: "Reward redemption flow, variant vs control" },
@@ -14,7 +15,7 @@ const outcomes = [
 
 export function Section05Results() {
   return (
-    <section className="flex flex-col gap-8 bg-white px-6 py-16 md:px-16 md:py-22">
+    <Reveal as="section" className="flex flex-col gap-8 bg-white px-6 py-16 md:px-16 md:py-22">
       <SectionHead number="05" title="Results" subtitle="What the test returned, and what it did not." />
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -45,6 +46,6 @@ export function Section05Results() {
           different metric than the one we instrumented.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

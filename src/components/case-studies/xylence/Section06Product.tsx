@@ -3,6 +3,7 @@ import screenHome from "@/assets/case-studies/xylence/screen-home.png"
 import screenPipeline from "@/assets/case-studies/xylence/screen-pipeline.png"
 import screenProfile from "@/assets/case-studies/xylence/screen-profile.png"
 import screenVideo from "@/assets/case-studies/xylence/screen-video.png"
+import { Reveal } from "@/components/motion/Reveal"
 
 const screens = [
   {
@@ -55,7 +56,7 @@ const screens = [
 
 export function Section06Product() {
   return (
-    <section className="flex flex-col gap-14 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-14 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="06"
         title="Soundboard, where the system becomes visible"
@@ -79,6 +80,6 @@ export function Section06Product() {
           </div>
         </div>
       ))}
-    </section>
+    </Reveal>
   )
 }

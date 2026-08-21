@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const stats = [
   { value: "MXN 236 bn", title: "CIBanco assets under management", note: "1.54% of the Mexican banking system — CNBV, Apr 2025" },
@@ -42,7 +43,7 @@ const cards = [
 
 export function Section02Context() {
   return (
-    <section className="flex flex-col gap-10 bg-cib-bg-2 px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cib-bg-2 px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         theme="dark"
         number="02"
@@ -79,6 +80,6 @@ export function Section02Context() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

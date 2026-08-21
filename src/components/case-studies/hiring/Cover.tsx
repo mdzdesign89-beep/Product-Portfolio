@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { Reveal } from "@/components/motion/Reveal"
 import coverMockup from "@/assets/case-studies/hiring/cover-macbook.png"
 
 const roles = [
@@ -40,19 +41,28 @@ export function Cover() {
       </Link>
       <div className="relative flex flex-col gap-14 lg:flex-row lg:items-start">
         <div className="flex max-w-[822px] flex-1 flex-col items-start gap-5">
-          <p className="font-case text-base font-bold tracking-[0.06em] text-hp-rust">
-            EVIDEN / ATOS · INTERNAL TALENT PLATFORM · 2023
-          </p>
-          <h1 className="font-case text-5xl font-bold leading-[1.12] text-hp-ink md:text-[78px]">
-            Hiring Platform
-          </h1>
-          <p className="font-case text-xl font-light leading-relaxed text-hp-muted md:text-2xl">
-            Replacing spreadsheets and email chains with one recruitment
-            tool — as the only designer inside a fifteen-person engineering
-            team.
-          </p>
+          <Reveal delay={0}>
+            <p className="font-case text-base font-bold tracking-[0.06em] text-hp-rust">
+              EVIDEN / ATOS · INTERNAL TALENT PLATFORM · 2023
+            </p>
+          </Reveal>
+          <Reveal delay={90}>
+            <h1 className="font-case text-5xl font-bold leading-[1.12] text-hp-ink md:text-[78px]">
+              Hiring Platform
+            </h1>
+          </Reveal>
+          <Reveal delay={180}>
+            <p className="font-case text-xl font-light leading-relaxed text-hp-muted md:text-2xl">
+              Replacing spreadsheets and email chains with one recruitment
+              tool — as the only designer inside a fifteen-person engineering
+              team.
+            </p>
+          </Reveal>
 
-          <div className="flex w-full flex-col gap-6 border-l-4 border-hp-rust px-5.5 py-4 sm:flex-row sm:gap-8">
+          <Reveal
+            delay={270}
+            className="flex w-full flex-col gap-6 border-l-4 border-hp-rust px-5.5 py-4 sm:flex-row sm:gap-8"
+          >
             {roles.map((role) => (
               <div key={role.label} className="flex flex-1 flex-col gap-1">
                 <p className="font-case text-xs font-bold tracking-[0.08em] text-hp-rust">
@@ -61,9 +71,12 @@ export function Cover() {
                 <p className="font-case text-base font-medium text-hp-ink">{role.value}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
 
-          <div className="flex w-full flex-col divide-y divide-hp-border sm:flex-row sm:divide-x sm:divide-y-0">
+          <Reveal
+            delay={360}
+            className="flex w-full flex-col divide-y divide-hp-border sm:flex-row sm:divide-x sm:divide-y-0"
+          >
             {metrics.map((metric) => (
               <div key={metric.title} className="flex flex-1 flex-col gap-1 py-4 first:pt-0 sm:px-6.5 sm:py-0 sm:first:pl-0">
                 <p className="font-case text-[44px] font-bold leading-tight text-hp-teal">
@@ -74,14 +87,16 @@ export function Cover() {
                 <p className="font-case text-base text-hp-muted-2">{metric.note}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
 
-        <img
-          src={coverMockup}
-          alt="Hiring Platform candidate screening dashboard on a laptop"
-          className="relative w-full min-w-0 max-w-[900px] self-center lg:self-start"
-        />
+        <Reveal delay={200} className="relative w-full min-w-0 max-w-[900px] self-center lg:self-start">
+          <img
+            src={coverMockup}
+            alt="Hiring Platform candidate screening dashboard on a laptop"
+            className="w-full"
+          />
+        </Reveal>
       </div>
     </section>
   )

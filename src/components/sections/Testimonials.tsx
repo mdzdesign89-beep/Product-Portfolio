@@ -1,8 +1,9 @@
 import { testimonials } from "@/lib/content"
+import { Reveal } from "@/components/motion/Reveal"
 
 export function Testimonials() {
   return (
-    <section className="flex flex-col gap-8 border-y border-line bg-paper px-6 py-16 md:px-16 md:py-20">
+    <Reveal as="section" className="flex flex-col gap-8 border-y border-line bg-paper px-6 py-16 md:px-16 md:py-20">
       <div className="flex flex-col gap-3.5">
         <div className="flex items-center justify-between">
           <h2 className="font-display text-4xl font-black leading-[0.92] tracking-tight text-ink md:text-[56px] md:tracking-[-1.96px]">
@@ -18,8 +19,9 @@ export function Testimonials() {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {testimonials.map((testimonial, index) => (
-          <div
+          <Reveal
             key={index}
+            delay={index * 100}
             className="flex flex-col items-start gap-4.5 border border-line bg-mist px-8 py-7.5"
           >
             <p className="font-black text-[44px] leading-none tracking-tight text-[#878985]">
@@ -38,9 +40,9 @@ export function Testimonials() {
                 </p>
               </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

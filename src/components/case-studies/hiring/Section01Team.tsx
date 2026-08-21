@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const team = [
   { n: "9", title: "Backend engineers", body: "Already building against undefined screens", accent: false },
@@ -9,7 +10,7 @@ const team = [
 
 export function Section01Team() {
   return (
-    <section className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="01"
         title="Walking into a project already in motion"
@@ -78,6 +79,6 @@ export function Section01Team() {
           with in a room, not to be admired in a portfolio.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const rows = [
   {
@@ -35,7 +36,7 @@ const rows = [
 
 export function Section03Evidence() {
   return (
-    <section className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="03"
         title="Evidence, and where it came from"
@@ -78,6 +79,6 @@ export function Section03Evidence() {
           constraint, not a preference.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

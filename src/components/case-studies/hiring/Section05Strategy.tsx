@@ -1,6 +1,7 @@
 import { SectionHead } from "./SectionHead"
 import architectureDiagram from "@/assets/case-studies/hiring/architecture-diagram.png"
 import prioritisationMatrix from "@/assets/case-studies/hiring/prioritisation-matrix.png"
+import { Reveal } from "@/components/motion/Reveal"
 
 const chain = [
   {
@@ -42,7 +43,7 @@ const chain = [
 
 export function Section05Strategy() {
   return (
-    <section className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="05"
         title="Strategy & how things got decided"
@@ -73,9 +74,10 @@ export function Section05Strategy() {
       </div>
 
       <div className="flex w-full flex-col gap-4">
-        {chain.map((link) => (
-          <div
+        {chain.map((link, i) => (
+          <Reveal
             key={link.tag}
+            delay={i * 90}
             className={`flex flex-col gap-5 rounded-[10px] px-7 py-6 sm:flex-row ${link.highlight ? "bg-hp-mist border border-hp-border" : "bg-white border border-hp-border"}`}
           >
             <p className="w-full shrink-0 font-case text-xs font-bold tracking-[0.08em] text-hp-rust sm:w-[140px]">
@@ -93,9 +95,9 @@ export function Section05Strategy() {
               <p className="font-case text-xs font-bold tracking-[0.08em] text-hp-muted-2">DECISION</p>
               <p className="font-case text-base font-medium leading-relaxed text-hp-ink">{link.decision}</p>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

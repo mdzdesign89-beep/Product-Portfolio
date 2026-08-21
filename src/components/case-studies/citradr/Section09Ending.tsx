@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const learnings = [
   {
@@ -33,7 +34,7 @@ const carryForward = [
 
 export function Section09Ending() {
   return (
-    <section className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
       <SectionHead number="09" title="How it ended, and what I took away" />
 
       <div className="flex w-full flex-col gap-3.5 rounded-xl bg-cib-bg-2 px-6 py-9 md:px-11 md:py-9">
@@ -91,6 +92,6 @@ export function Section09Ending() {
         figures via public reporting, April 2025; AMIB year-end 2025
         investment-account data.
       </p>
-    </section>
+    </Reveal>
   )
 }

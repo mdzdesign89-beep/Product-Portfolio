@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import { Callout } from "./Callout"
+import { Reveal } from "@/components/motion/Reveal"
 
 const methodPoints = [
   {
@@ -73,7 +74,7 @@ const findings = [
 
 export function Section03Research() {
   return (
-    <section className="flex flex-col gap-10 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="03"
         title="Research without access"
@@ -141,6 +142,6 @@ export function Section03Research() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

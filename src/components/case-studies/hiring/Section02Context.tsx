@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const stats = [
   { value: "6–8 weeks", title: "To fill a single position", note: "the business problem behind the project" },
@@ -40,7 +41,7 @@ const cards = [
 
 export function Section02Context() {
   return (
-    <section className="flex flex-col gap-10 bg-hp-teal px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-hp-teal px-6 py-16 md:px-16 md:py-24">
       <SectionHead theme="dark" number="02" title="Context & the problem" />
 
       <div className="grid w-full grid-cols-1 divide-y divide-[#4d7882] rounded-xl border border-[#4d7882] bg-hp-teal-2 sm:grid-cols-4 sm:divide-x sm:divide-y-0">
@@ -68,6 +69,6 @@ export function Section02Context() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

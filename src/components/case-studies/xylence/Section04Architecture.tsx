@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import { Callout } from "./Callout"
+import { Reveal } from "@/components/motion/Reveal"
 
 const columns = [
   {
@@ -36,7 +37,7 @@ const navRows = [
 
 export function Section04Architecture() {
   return (
-    <section className="flex flex-col gap-11 bg-cs-bg-2 px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-11 bg-cs-bg-2 px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="04"
         title="Redefining an architecture I inherited"
@@ -85,6 +86,6 @@ export function Section04Architecture() {
           </tbody>
         </table>
       </div>
-    </section>
+    </Reveal>
   )
 }

@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const findings = [
   {
@@ -20,7 +21,7 @@ const findings = [
 
 export function Section01Problem() {
   return (
-    <section className="flex flex-col gap-8 bg-white px-6 py-16 md:px-16 md:py-22">
+    <Reveal as="section" className="flex flex-col gap-8 bg-white px-6 py-16 md:px-16 md:py-22">
       <SectionHead
         number="01"
         title="The problem"
@@ -45,6 +46,6 @@ export function Section01Problem() {
           Recurring sentiment across interviews — the sentence that framed the whole project.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

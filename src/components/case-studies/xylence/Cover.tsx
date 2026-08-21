@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { Reveal } from "@/components/motion/Reveal"
 import dashboard from "@/assets/case-studies/xylence/portada-dashboard.png"
 
 const roles = [
@@ -37,21 +38,30 @@ export function Cover() {
       </Link>
       <div className="relative flex flex-col gap-16 lg:flex-row lg:items-start">
         <div className="flex max-w-[760px] flex-col items-start gap-6 border-l-[3px] border-cs-gold pl-6">
-          <p className="font-case text-base font-bold tracking-[0.06em] text-cs-gold">
-            XYLENCE · AI PRODUCT DESIGN · 2026 – PRESENT
-          </p>
-          <h1 className="font-case text-4xl font-bold leading-[1.12] text-white sm:text-5xl sm:whitespace-nowrap md:text-[76px]">
-            Turning a brain
-            <br />
-            into a product
-          </h1>
-          <p className="font-case text-xl font-light leading-relaxed text-[#bdbdbd] md:text-[22px]">
-            Xylence had an intelligence engine and an architecture on paper. I
-            turned it into an interface — and the research changed the
-            architecture on the way.
-          </p>
+          <Reveal delay={0}>
+            <p className="font-case text-base font-bold tracking-[0.06em] text-cs-gold">
+              XYLENCE · AI PRODUCT DESIGN · 2026 – PRESENT
+            </p>
+          </Reveal>
+          <Reveal delay={90}>
+            <h1 className="font-case text-4xl font-bold leading-[1.12] text-white sm:text-5xl sm:whitespace-nowrap md:text-[76px]">
+              Turning a brain
+              <br />
+              into a product
+            </h1>
+          </Reveal>
+          <Reveal delay={180}>
+            <p className="font-case text-xl font-light leading-relaxed text-[#bdbdbd] md:text-[22px]">
+              Xylence had an intelligence engine and an architecture on paper. I
+              turned it into an interface — and the research changed the
+              architecture on the way.
+            </p>
+          </Reveal>
 
-          <div className="flex w-full flex-col gap-6 border-l-[3px] border-cs-gold px-5 py-4 sm:flex-row sm:gap-8">
+          <Reveal
+            delay={270}
+            className="flex w-full flex-col gap-6 border-l-[3px] border-cs-gold px-5 py-4 sm:flex-row sm:gap-8"
+          >
             {roles.map((role) => (
               <div key={role.label} className="flex flex-1 flex-col gap-1">
                 <p className="font-case text-xs font-bold tracking-[0.08em] text-cs-gold">
@@ -60,9 +70,12 @@ export function Cover() {
                 <p className="font-case text-[15px] font-medium text-white">{role.value}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
 
-          <div className="flex w-full flex-col divide-y divide-[#2e2e2e] sm:flex-row sm:divide-x sm:divide-y-0">
+          <Reveal
+            delay={360}
+            className="flex w-full flex-col divide-y divide-[#2e2e2e] sm:flex-row sm:divide-x sm:divide-y-0"
+          >
             {metrics.map((metric) => (
               <div key={metric.title} className="flex flex-1 flex-col gap-1 py-4 first:pt-0 sm:px-6 sm:py-0 sm:first:pl-0">
                 <p className="font-case text-[34px] font-bold leading-tight text-cs-gold">
@@ -72,14 +85,16 @@ export function Cover() {
                 <p className="font-case text-sm text-cs-text-dim">{metric.detail}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
 
-        <img
-          src={dashboard}
-          alt="Xylence VC intelligence dashboard mockup"
-          className="relative w-full min-w-0 max-w-[900px] rounded-xl lg:flex-1"
-        />
+        <Reveal delay={200} className="relative w-full min-w-0 max-w-[900px] lg:flex-1">
+          <img
+            src={dashboard}
+            alt="Xylence VC intelligence dashboard mockup"
+            className="w-full rounded-xl"
+          />
+        </Reveal>
       </div>
     </section>
   )

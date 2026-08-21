@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const learnings = [
   {
@@ -23,7 +24,7 @@ const differently = [
 
 export function Section06Learnings() {
   return (
-    <section className="flex flex-col gap-8 bg-aza-mist px-6 py-16 md:px-16 md:py-22">
+    <Reveal as="section" className="flex flex-col gap-8 bg-aza-mist px-6 py-16 md:px-16 md:py-22">
       <SectionHead number="06" title="Learnings" />
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -43,6 +44,6 @@ export function Section06Learnings() {
           ))}
         </ul>
       </div>
-    </section>
+    </Reveal>
   )
 }

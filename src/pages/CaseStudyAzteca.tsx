@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { HeaderNav } from "@/components/sections/HeaderNav"
+import { ScrollProgressBar } from "@/components/motion/ScrollProgressBar"
 import { Hero } from "@/components/case-studies/azteca/Hero"
 import { ImpactBand } from "@/components/case-studies/azteca/ImpactBand"
 import { Section01Problem } from "@/components/case-studies/azteca/Section01Problem"
@@ -17,6 +18,7 @@ export function CaseStudyAzteca() {
 
   return (
     <div className="min-h-screen bg-white">
+      <ScrollProgressBar colorClassName="bg-aza-green" />
       <HeaderNav />
       <Hero />
       <ImpactBand />

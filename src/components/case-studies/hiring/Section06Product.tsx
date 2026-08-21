@@ -1,9 +1,10 @@
 import { SectionHead } from "./SectionHead"
 import productBoard from "@/assets/case-studies/hiring/product-board.png"
+import { Reveal } from "@/components/motion/Reveal"
 
 export function Section06Product() {
   return (
-    <section className="flex flex-col gap-10 bg-hp-mist px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-hp-mist px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="06"
         title="The product"
@@ -41,6 +42,6 @@ export function Section06Product() {
           </p>
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

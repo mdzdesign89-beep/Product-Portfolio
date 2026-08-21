@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const columns = [
   {
@@ -44,7 +45,7 @@ const columns = [
 
 export function Section01Arriving() {
   return (
-    <section className="flex flex-col gap-10 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cs-bg px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="01"
         title="Arriving before the product existed"
@@ -63,6 +64,6 @@ export function Section01Arriving() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

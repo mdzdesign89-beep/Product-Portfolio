@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { HeaderNav } from "@/components/sections/HeaderNav"
+import { ScrollProgressBar } from "@/components/motion/ScrollProgressBar"
 import { Cover } from "@/components/case-studies/hiring/Cover"
 import { DisclaimerBar } from "@/components/case-studies/hiring/DisclaimerBar"
 import { TlDr } from "@/components/case-studies/hiring/TlDr"
@@ -21,6 +22,7 @@ export function CaseStudyHiring() {
 
   return (
     <div className="min-h-screen bg-white">
+      <ScrollProgressBar colorClassName="bg-hp-rust" />
       <HeaderNav />
       <Cover />
       <DisclaimerBar />

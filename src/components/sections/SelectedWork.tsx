@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 import { projects } from "@/lib/content"
+import { Reveal } from "@/components/motion/Reveal"
 
 export function SelectedWork() {
   return (
-    <section id="work" className="flex flex-col gap-8 bg-ink px-6 py-16 md:px-16 md:py-20">
+    <Reveal as="section" id="work" className="flex flex-col gap-8 bg-ink px-6 py-16 md:px-16 md:py-20">
       <div className="flex flex-col gap-3.5">
         <div className="flex items-center justify-between">
           <h2 className="font-display text-4xl font-black leading-[0.92] tracking-tight text-mist md:text-[56px] md:tracking-[-1.96px]">
@@ -18,9 +19,11 @@ export function SelectedWork() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {projects.map((project) => (
-          <article
+        {projects.map((project, i) => (
+          <Reveal
             key={project.id}
+            as="article"
+            delay={i * 100}
             className="flex flex-col rounded-lg border border-line-dark bg-[#1b1c1c] px-4 pt-4"
           >
             <img
@@ -67,9 +70,9 @@ export function SelectedWork() {
                 </span>
               )}
             </div>
-          </article>
+          </Reveal>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

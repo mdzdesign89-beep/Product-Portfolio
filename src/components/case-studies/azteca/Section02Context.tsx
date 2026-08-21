@@ -1,4 +1,5 @@
 import { SectionHead } from "./SectionHead"
+import { Reveal } from "@/components/motion/Reveal"
 
 const columns = [
   {
@@ -22,7 +23,7 @@ const columns = [
 
 export function Section02Context() {
   return (
-    <section className="flex flex-col gap-8 bg-aza-mist px-6 py-16 md:px-16 md:py-22">
+    <Reveal as="section" className="flex flex-col gap-8 bg-aza-mist px-6 py-16 md:px-16 md:py-22">
       <SectionHead number="02" title="Context & constraints" />
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         {columns.map((col) => (
@@ -36,6 +37,6 @@ export function Section02Context() {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   )
 }

@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import { Callout } from "./Callout"
+import { Reveal } from "@/components/motion/Reveal"
 
 const learnings = [
   {
@@ -34,7 +35,7 @@ const heading = [
 
 export function Section08TookAway() {
   return (
-    <section className="flex flex-col gap-10 bg-cs-bg-2 px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cs-bg-2 px-6 py-16 md:px-16 md:py-24">
       <SectionHead number="08" title="What I took away" />
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {learnings.map((item) => (
@@ -75,6 +76,6 @@ export function Section08TookAway() {
         (March–April 2021) — a survey of 885 venture capitalists at 681
         firms.
       </p>
-    </section>
+    </Reveal>
   )
 }

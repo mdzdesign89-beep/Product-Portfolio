@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead"
 import dashboardTilt from "@/assets/case-studies/citradr/dashboard-tilt.png"
+import { Reveal } from "@/components/motion/Reveal"
 
 const traits = [
   { title: "The expert end", body: "Trades actively, reads dense tables fluently, wants density and speed over hand-holding. Punishes extra taps." },
@@ -9,7 +10,7 @@ const traits = [
 
 export function Section04Users() {
   return (
-    <section className="flex flex-col gap-10 bg-cib-mist-2 px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cib-mist-2 px-6 py-16 md:px-16 md:py-24">
       <SectionHead number="04" title="Who I was designing for" />
 
       <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
@@ -55,6 +56,6 @@ export function Section04Users() {
           </div>
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

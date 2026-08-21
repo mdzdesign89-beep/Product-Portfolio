@@ -3,6 +3,7 @@ import personaNatalia from "@/assets/case-studies/hiring/persona-natalia.png"
 import personaAlejandro from "@/assets/case-studies/hiring/persona-alejandro.png"
 import userFlows from "@/assets/case-studies/hiring/user-flows.png"
 import cardSorting from "@/assets/case-studies/hiring/card-sorting.png"
+import { Reveal } from "@/components/motion/Reveal"
 
 const stats = [
   { value: "9", label: "HR recruiters interviewed" },
@@ -78,7 +79,7 @@ function PersonaCard({
 
 export function Section04Research() {
   return (
-    <section className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-white px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="04"
         title="Research & the two people it came down to"
@@ -150,6 +151,6 @@ export function Section04Research() {
           <img src={cardSorting} alt="Card sorting results" className="w-full rounded-xl border border-hp-border" />
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

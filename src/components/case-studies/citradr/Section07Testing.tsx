@@ -1,6 +1,7 @@
 import { SectionHead } from "./SectionHead"
 import variantA from "@/assets/case-studies/citradr/variant-a.png"
 import variantB from "@/assets/case-studies/citradr/variant-b.png"
+import { Reveal } from "@/components/motion/Reveal"
 
 const rows = [
   {
@@ -25,7 +26,7 @@ const rows = [
 
 export function Section07Testing() {
   return (
-    <section className="flex flex-col gap-10 bg-cib-mist-2 px-6 py-16 md:px-16 md:py-24">
+    <Reveal as="section" className="flex flex-col gap-10 bg-cib-mist-2 px-6 py-16 md:px-16 md:py-24">
       <SectionHead
         number="07"
         title="How I tested it"
@@ -103,6 +104,6 @@ export function Section07Testing() {
           not as a performance guarantee.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }
