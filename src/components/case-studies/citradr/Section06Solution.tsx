@@ -24,6 +24,8 @@ export function Section06Solution() {
           afterAlt="CIBanco home, new identity"
           beforeActiveClassName="bg-[#c0471f] text-white"
           afterActiveClassName="bg-cib-olive text-white"
+          beforeDotClassName="bg-[#c0471f]"
+          afterDotClassName="bg-cib-olive"
           imageContainerClassName="bg-cib-mist"
           beforeBullets={[
             "Light theme with product rows — reads as utility banking, not wealth.",

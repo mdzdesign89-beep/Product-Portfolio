@@ -1,4 +1,36 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+function StaggeredBullets({
+  items,
+  dotClassName,
+}: {
+  items: string[]
+  dotClassName: string
+}) {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const id = setTimeout(() => setVisible(true), 20)
+    return () => clearTimeout(id)
+  }, [])
+
+  return (
+    <ul className="flex flex-col gap-3 md:flex-1">
+      {items.map((item, i) => (
+        <li
+          key={item}
+          className={`flex items-start gap-2.5 font-case text-base leading-relaxed text-[#575757] transition-[opacity,transform] duration-500 ease-out ${
+            visible ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"
+          }`}
+          style={{ transitionDelay: visible ? `${i * 70}ms` : "0ms" }}
+        >
+          <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${dotClassName}`} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export function BeforeAfterToggle({
   before,
@@ -11,6 +43,8 @@ export function BeforeAfterToggle({
   afterBullets,
   beforeActiveClassName,
   afterActiveClassName,
+  beforeDotClassName,
+  afterDotClassName,
   imageContainerClassName = "",
   className = "",
 }: {
@@ -24,6 +58,8 @@ export function BeforeAfterToggle({
   afterBullets: string[]
   beforeActiveClassName: string
   afterActiveClassName: string
+  beforeDotClassName: string
+  afterDotClassName: string
   imageContainerClassName?: string
   className?: string
 }) {
@@ -74,13 +110,11 @@ export function BeforeAfterToggle({
           />
         </div>
 
-        <ul className="flex flex-col gap-3 md:flex-1">
-          {(showAfter ? afterBullets : beforeBullets).map((item) => (
-            <li key={item} className="font-case text-base leading-relaxed text-[#575757]">
-              · {item}
-            </li>
-          ))}
-        </ul>
+        <StaggeredBullets
+          key={showAfter ? "after" : "before"}
+          items={showAfter ? afterBullets : beforeBullets}
+          dotClassName={showAfter ? afterDotClassName : beforeDotClassName}
+        />
       </div>
     </div>
   )
