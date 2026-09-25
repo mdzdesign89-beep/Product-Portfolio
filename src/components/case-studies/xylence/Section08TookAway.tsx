@@ -5,19 +5,19 @@ import { Reveal } from "@/components/motion/Reveal"
 const learnings = [
   {
     title: "Removing a section is the hard argument",
-    body: "Adding a feature is easy to sell; taking one away looks like subtraction. Dissolving Memory and Intelligence needed evidence, not taste — and having a research corpus to point at is what made the conversation possible at all.",
+    body: "Adding a feature is easy to sell; removing one looks like loss. Dissolving Memory and Intelligence took evidence, not taste.",
   },
   {
     title: "Learn the layer below yours",
-    body: "The most valuable thing I did all year — aligning endpoint names with the data warehouse — was invisible from a canvas. It only existed because I asked the data scientists how their databases actually connect instead of waiting for a spec.",
+    body: "My best decision all year was invisible from a canvas: aligning endpoint names with the data warehouse. It only happened because I asked the data team how things actually connect.",
   },
   {
     title: "A design system for AI agent",
-    body: "When an agent consumes your documentation, vagueness has an immediate cost. It made me more rigorous about specification than any handoff ritual ever had.",
+    body: "When an agent reads your documentation, vagueness has an immediate cost. It made me more rigorous than any handoff ritual ever did.",
   },
   {
     title: "Secondary research beats invented users",
-    body: "I could not reach VC partners. Podcasts and a rigorous academic survey gave me a vocabulary and a decision model I could design against. It is not equivalent to talking to users — but the alternative on offer was inventing them.",
+    body: "Podcasts and an academic survey gave me a vocabulary and a decision model to design against. Not equivalent to real users — but better than inventing them.",
   },
 ]
 

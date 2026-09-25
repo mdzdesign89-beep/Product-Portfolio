@@ -60,15 +60,15 @@ const evidenceRows = [
 const findings = [
   {
     title: "Team over product, in the interface",
-    body: "The survey is unambiguous that VCs attribute outcomes to the founding team more than to the product. So founder analysis is not a tab buried in a profile — it sits in the primary view of every startup.",
+    body: "VCs credit outcomes to the founding team more than to the product. So founder analysis sits in the primary view, not a buried tab.",
   },
   {
     title: "A pass is a decision, not a deletion",
-    body: "Podcast after podcast, partners described passes they still think about. That is why passing captures a structured reason and stays queryable, instead of removing the startup from the pipeline.",
+    body: "Partners kept describing passes they still think about. So passing records a structured reason and stays searchable.",
   },
   {
     title: "Explainability as a precondition",
-    body: "The recurring objection to AI in this market is opacity: if it cannot be explained, it does not get used. Every generated output shows its evidence, its confidence, and what data is missing.",
+    body: "If an output cannot be explained, it does not get used. Every result shows its evidence, its confidence and what data is missing.",
   },
 ]
 
