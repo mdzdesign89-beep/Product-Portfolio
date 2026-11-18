@@ -1,0 +1,187 @@
+/* Design process diagram (Rewards case, section 04).
+   Five phases on a timeline, closed by a loop arrow. Desktop: a row; phone width: a column. */
+.pd {
+  container-type: inline-size;
+}
+.pd-diagram {
+  position: relative;
+  padding: 52px 30px 0;
+}
+.pd-track {
+  position: absolute;
+  height: 2px;
+  background: #b9c2cc;
+  transform-origin: left center;
+  z-index: 0;
+}
+.pd-loop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+.pd-loop path {
+  fill: none;
+  stroke: #8a96a3;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.pd-loop-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #556274;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.pd-phases {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: auto auto auto auto;
+  column-gap: 24px;
+}
+.pd-phases:has(.pd-phase:hover, .pd-phase:focus-visible, .pd-phase.is-active)
+  .pd-phase:not(:hover):not(:focus-visible):not(.is-active) {
+  opacity: 0.35;
+}
+.pd-phase {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  align-content: start;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.pd-phase:focus-visible {
+  outline: 2px solid #17a54d;
+  outline-offset: 6px;
+}
+.pd-node {
+  grid-row: 1;
+  grid-column: 1;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--pd-tint);
+  box-shadow: inset 0 0 0 2px var(--pd-color);
+  display: grid;
+  place-items: center;
+}
+.pd-node svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: var(--pd-color);
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+.pd-phase h3 {
+  grid-row: 2;
+  grid-column: 1;
+  margin: 16px 0 0;
+  font-size: clamp(17px, 2cqw, 21px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: #0f172a;
+}
+.pd-acts {
+  grid-row: 3;
+  grid-column: 1;
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #556274;
+}
+.pd-detail {
+  grid-row: 4;
+  grid-column: 1;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 3px solid var(--pd-color);
+}
+.pd-detail b {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+.pd-detail p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #556274;
+}
+
+@container (max-width: 680px) {
+  .pd-diagram {
+    padding: 6px 0 0 26px;
+  }
+  .pd-phases {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .pd-phase {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 16px;
+    align-items: start;
+  }
+  .pd-node {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 56px;
+    height: 56px;
+  }
+  .pd-node svg {
+    width: 24px;
+    height: 24px;
+  }
+  .pd-phase h3 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 19px;
+  }
+  .pd-acts {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 2px;
+  }
+  .pd-detail {
+    grid-column: 2;
+    grid-row: 3;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .pd-loop-label {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pd-phase {
+    transition: none;
+  }
+}

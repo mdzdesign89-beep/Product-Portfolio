@@ -1,12 +1,11 @@
 import { SectionHead } from "./SectionHead"
 import { BeforeAfterSlider } from "@/components/motion/BeforeAfterSlider"
-import processDiagram from "@/assets/case-studies/azteca/process-diagram.png"
 import fieldResearch from "@/assets/case-studies/azteca/field-research.png"
 import iaBefore from "@/assets/case-studies/azteca/ia-before.png"
 import iaAfter from "@/assets/case-studies/azteca/ia-after.png"
 import rewardComponent from "@/assets/case-studies/azteca/reward-component.png"
 import finalScreens from "@/assets/case-studies/azteca/final-screens.png"
-import { Reveal } from "@/components/motion/Reveal"
+import { ProcessDiagram } from "./ProcessDiagram"
 
 function StepHead({ n, title }: { n: string; title: string }) {
   return (
@@ -72,14 +71,14 @@ const testSetup = [
 
 export function Section04Process() {
   return (
-    <Reveal as="section" className="flex flex-col gap-14 bg-white px-6 py-16 md:px-16 md:py-22">
+    <section className="flex flex-col gap-14 bg-white px-6 py-16 md:px-16 md:py-22">
       <SectionHead
         number="04"
         title="Design process"
         subtitle="A conversion-rate-optimization loop: understand the behaviour, form a hypothesis, restructure the information, then prove it with a test rather than an opinion."
       />
 
-      <img src={processDiagram} alt="Design process diagram: research, optimization, solution, evaluation" className="w-full rounded-xl border border-aza-border" />
+      <ProcessDiagram />
 
       <div className="flex flex-col gap-4">
         <StepHead n="01" title="Research — how this segment actually behaves" />
@@ -187,6 +186,6 @@ export function Section04Process() {
           ))}
         </div>
       </div>
-    </Reveal>
+    </section>
   )
 }
