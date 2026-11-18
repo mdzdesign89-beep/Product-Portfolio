@@ -6,37 +6,37 @@ const pipeline = [
   {
     n: "01",
     title: "Tokens",
-    body: "Colour, type, spacing and elevation defined as named tokens rather than values, so the same decision has one source of truth in Figma and in the repo.",
+    body: "Colour, type and spacing named as tokens, not values. One source of truth in Figma and in the repo.",
   },
   {
     n: "02",
     title: "Components",
-    body: "Patterns and interaction guidelines documented to spec level — sizing, padding, gap, radius, states — because an agent cannot infer intent from a picture.",
+    body: "Specs down to sizing, padding, gap and states. An agent cannot infer intent from a picture.",
   },
   {
     n: "03",
     title: "Generation",
-    body: "The AI consumes those tokens and components and produces React that already matches the system, instead of an approximation a developer then corrects.",
+    body: "The AI reads those tokens and returns React that already matches the system. No approximation for a developer to correct.",
   },
   {
     n: "04",
     title: "Repo",
-    body: "Output goes straight into the repository, so prototypes and production draw on the same primitives and the gap between them stops widening.",
+    body: "Output lands straight in the repository. Prototype and production share the same primitives.",
   },
 ]
 
 const changes = [
   {
     title: "Documentation became executable",
-    body: "A component spec used to be a courtesy for developers. Here it is an input to a generator, so ambiguity has an immediate cost. It made me far more precise than any handoff process ever did.",
+    body: "A spec is now an input to a generator, so ambiguity has an immediate cost. It made me more precise than any handoff process did.",
   },
   {
     title: "The prototype and the product converged",
-    body: "Because generation draws on the same tokens, what I prototyped and what shipped stopped being separate artefacts. Feedback loops with engineering went from days to the same afternoon.",
+    body: "Prototype and shipped product stopped being separate artefacts. Feedback with engineering went from days to the same afternoon.",
   },
   {
     title: "I had to learn the stack",
-    body: "Repositories, how the databases connected, what the agents could and could not do. Not to write production code, but to stop proposing things that were elegant on a canvas and expensive in a pipeline.",
+    body: "Repos, databases, what agents can and cannot do. Enough to stop proposing things that are elegant on canvas and expensive in a pipeline.",
   },
 ]
 

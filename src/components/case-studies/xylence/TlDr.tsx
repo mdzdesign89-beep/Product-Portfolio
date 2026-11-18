@@ -2,58 +2,19 @@ import { Reveal } from "@/components/motion/Reveal"
 const columns = [
   {
     label: "PROBLEM",
-    body: (
-      <>
-        Xylence was building an engine that ingests everything about a
-        startup, its founders, its market and its investors. Powerful, and
-        completely illegible:{" "}
-        <strong className="font-semibold text-white">
-          there was an architecture written down, and nothing a person could
-          actually open and use.
-        </strong>
-      </>
-    ),
+    body: "An engine that ingested everything about a startup — and nothing a person could open. There was an architecture on paper, no product.",
   },
   {
     label: "MY ROLE",
-    body: (
-      <>
-        First designer in the company.{" "}
-        <strong className="font-semibold text-white">
-          I learned the business, the data model and what the engine could
-          plausibly do, then designed the interface that made it usable
-        </strong>{" "}
-        — working inside a product vision and vocabulary the founders had
-        already set.
-      </>
-    ),
+    body: "First designer in the company. I turned the engine into an interface, working inside a vision the founders had already set.",
   },
   {
     label: "APPROACH",
-    body: (
-      <>
-        I could not reach my users — analysts and partners at VC funds. So{" "}
-        <strong className="font-semibold text-white">
-          I used specialised podcasts as an interview source and based on the
-          largest academic survey of how VCs actually decide
-        </strong>
-        . That evidence is what changed the architecture.
-      </>
-    ),
+    body: "I could not reach VC analysts, so I used specialised podcasts as interviews plus a major academic survey on how VCs decide. That evidence changed the architecture.",
   },
   {
     label: "OUTCOME",
-    body: (
-      <>
-        A navigation that removed two proposed sections and added two that
-        were missing, the{" "}
-        <strong className="font-semibold text-white">
-          Soundboard screens, a design system whose tokens an AI worked
-          directly with React
-        </strong>
-        , and a working prototype built directly with Claude.
-      </>
-    ),
+    body: "Soundboard's screens, a navigation I redefined, and a design system whose tokens an AI turns into React. Plus a working prototype built with Claude.",
   },
 ]
 
